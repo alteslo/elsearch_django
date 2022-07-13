@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+sqlite.db
+.esdjenv
+esdjenv/
+.vscode/
+
+!core/*/migrations/__init__.py
+core/*/migrations/*
