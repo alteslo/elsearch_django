@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
-from config_reader import config
 
+from core.config_reader import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -19,7 +19,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_elasticsearch_dsl',
     'blog',
+    'search',
 ]
 
 MIDDLEWARE = [
