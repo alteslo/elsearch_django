@@ -133,5 +133,5 @@ sqlite.db
 esdjenv/
 .vscode/
 
-!core/*/migrations/__init__.py
 core/*/migrations/*
+!**/migrations/__init__.py
