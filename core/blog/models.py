@@ -30,5 +30,13 @@ class Article(models.Model):
     created_datetime = models.DateTimeField(auto_now_add=True)
     updated_datetime = models.DateTimeField(auto_now=True)
 
+    @classmethod
+    def _dict_convert_article_type(cls):
+        return {k: v for k, v in cls.ARTICLE_TYPES}
+
+    def type_to_string(self):
+        article_type = Article._dict_convert_article_type()
+        return article_type.get(self.type)
+
     def __str__(self):
         return f'{self.author}: {self.title} ({self.created_datetime.date()})'

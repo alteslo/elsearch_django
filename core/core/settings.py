@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django_elasticsearch_dsl',
+    'django_elasticsearch_dsl',
     'blog',
     'search',
     'rest_framework',
@@ -94,6 +94,16 @@ REST_FRAMEWORK = {
                                 'LimitOffsetPagination',
     'PAGE_SIZE': 25
 }
+
+# Elasticsearch
+# https://django-elasticsearch-dsl.readthedocs.io/en/latest/settings.html
+
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'localhost:9200'
+    },
+}
+
 
 LANGUAGE_CODE = 'ru-ru'
 TIME_ZONE = 'Europe/Moscow'
