@@ -1,6 +1,5 @@
 Django==4.0.6
-pydantic==1.9.1
-python-dotenv==0.20.0
+environs==9.5.0
 djangorestframework==3.13.1
 elasticsearch==7.17.4
 elasticsearch-dsl==7.4.0

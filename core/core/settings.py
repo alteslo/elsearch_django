@@ -1,13 +1,15 @@
 import os
 from pathlib import Path
 
-from core.config_reader import config
+from core.config_reader import load_config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = config.django_secret_key.get_secret_value()
-DEBUG = config.django_debug_options
-ALLOWED_HOSTS = config.django_allowed_hosts.split()
+config = load_config('../core/core/.env')
+
+SECRET_KEY = config.django.sekret_key
+DEBUG = config.django.debug_options
+ALLOWED_HOSTS = config.django.allowed_hosts.split()
 
 
 # Application definition
@@ -100,7 +102,8 @@ REST_FRAMEWORK = {
 
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'localhost:9200'
+        # 'hosts': 'localhost:9200'
+        'hosts': 'elasticsearch_db:9200'
     },
 }
 
