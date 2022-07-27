@@ -12,10 +12,8 @@ class DjangoConfig:
 
 @dataclass
 class ESConfig:
-    user: str
-    password: str
+    name: str
     host: str
-    port: str
 
 
 @dataclass
@@ -35,9 +33,7 @@ def load_config(path: str = None):
             debug_options=env.bool('DEBUG_OPTIONS')
         ),
         es=ESConfig(
-            user=env.str('ES_USER'),
-            password=env.str('ES_USER'),
-            host=env.str('ES_USER'),
-            port=env.str('ES_USER')
+            name=env.str('ES_NAME'),
+            host=env.str('ES_HOSTS'),
         )
     )

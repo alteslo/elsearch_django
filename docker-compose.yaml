@@ -15,10 +15,11 @@ services:
       - es
   es:
     image: elasticsearch:7.17.5
-    container_name: elasticsearch_db
+    container_name: ${ES_NAME}
     ports:
       - 9200:9200
       - 9300:9300
+    env_file: ./.env
     environment:
       - discovery.type=single-node
     networks:
