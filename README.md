@@ -64,4 +64,4 @@
     
     - http://127.0.0.1:8001/search/user/jess_/
     - http://127.0.0.1:8001/search/category/seo/
-    - http://127.0.0.1:8000/search/article/linux/
+    - http://127.0.0.1:8001/search/article/linux/
